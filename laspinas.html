@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living in Las Piñas Metro Manila</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            height: 100vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+                url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #ffd166;
+            margin-bottom: 35px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #ffd166;
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        /* SECTION */
+
+        .section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        /* GRID */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        /* CARD */
+
+        .card {
+            background: #fff;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #c89b3c;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* HIGHLIGHT SECTION */
+
+        .highlight {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .highlight h2 {
+            font-size: 4rem;
+            margin-bottom: 25px;
+        }
+
+        .highlight p {
+            max-width: 900px;
+            margin: auto;
+            font-size: 1.3rem;
+            line-height: 2;
+            color: #ddd;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: linear-gradient(135deg, #c89b3c, #ffd166);
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 4rem;
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            color: #222;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 18px 40px;
+            background: #111;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #000;
+            color: #aaa;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.3rem;
+            }
+
+            .highlight h2 {
+                font-size: 2.3rem;
+            }
+
+            .cta h2 {
+                font-size: 2.5rem;
+            }
+
+            .cta p {
+                font-size: 1rem;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>🌆 LIVE IN LAS PIÑAS <br> METRO MANILA</h1>
+
+            <p>
+                Experience modern suburban living with accessibility,
+                comfort, convenience, and long-term investment value.
+            </p>
+
+            <a href="#" class="hero-btn">
+                🏡 Explore Properties
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ADVANTAGES -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                🌟 WHY CHOOSE LAS PIÑAS?
+            </h2>
+
+            <p class="section-subtitle">
+                Las Piñas is one of the most ideal residential cities
+                in Metro Manila — offering peaceful living while staying
+                connected to major business districts and lifestyle hubs.
+            </p>
+
+            <div class="grid">
+
+                <div class="card">
+                    <div class="icon">📍</div>
+                    <h3>Prime Location</h3>
+                    <p>
+                        Easy access to Alabang, Makati, BGC,
+                        Cavite, and NAIA Airport.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🛍</div>
+                    <h3>Commercial Convenience</h3>
+                    <p>
+                        Near malls, supermarkets,
+                        restaurants, cafes, and lifestyle centers.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🏫</div>
+                    <h3>Quality Education</h3>
+                    <p>
+                        Accessible to schools, colleges,
+                        and universities for growing families.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🏥</div>
+                    <h3>Healthcare Access</h3>
+                    <p>
+                        Close to hospitals and clinics
+                        for quality medical services.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🌳</div>
+                    <h3>Peaceful Environment</h3>
+                    <p>
+                        Enjoy a quieter suburban atmosphere
+                        while remaining connected to the city.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">📈</div>
+                    <h3>Great Investment</h3>
+                    <p>
+                        Property values continue to rise,
+                        making Las Piñas a smart investment.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🚗</div>
+                    <h3>Accessible Transportation</h3>
+                    <p>
+                        Convenient access to expressways,
+                        public transportation, and major roads.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🏡</div>
+                    <h3>Perfect for Families</h3>
+                    <p>
+                        Safe communities with modern living
+                        designed for family comfort.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- HIGHLIGHT -->
+
+    <section class="highlight">
+
+        <h2>✨ Balanced City Living</h2>
+
+        <p>
+            Las Piñas offers the perfect balance between urban convenience
+            and peaceful suburban comfort. Whether you're starting a family,
+            investing in property, or looking for a better lifestyle,
+            Las Piñas provides accessibility, safety, and long-term value.
+        </p>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>🏡 Start Your Dream Living Today</h2>
+
+        <p>
+            Discover modern homes and investment opportunities
+            in one of Metro Manila’s fastest-growing cities.
+        </p>
+
+        <a href="contact.html">
+            📩 Inquire Now
+        </a>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2025 Las Piñas Metro Manila Living Guide
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Victoria Ville</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        /* CONTAINER */
+        .details-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+        }
+
+        /* BACK BUTTON */
+        .home-btn {
+            display: inline-block;
+            margin: 15px;
+            text-decoration: none;
+            background: green;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        /* MAIN IMAGE */
+        .main-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: flex;
+            gap: 5px;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+
+        .gallery img {
+            height: 70px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* TEXT */
+        h1 {
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        /* 📱 MOBILE */
+        @media (max-width: 768px) {
+            .details-container {
+                padding: 15px;
+            }
+
+            .gallery img {
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BACK BUTTON (FIXED POSITION) -->
+    <a href="index.html" class="home-btn">🏠 Back to Home</a>
+
+    <div class="details-container">
+        <h1>Victoria Ville, Panapaan III, Bacoor Cavite 🏡</h1>
+
+        <!-- MAIN IMAGE -->
+        <img src="victoria/vc1.png" class="main-img" id="mainImage">
+
+        <!-- GALLERY -->
+        <div class="gallery">
+            <img src="victoria/vc1.png" onclick="changeImage(this)">
+            <img src="victoria/vc10.png" onclick="changeImage(this)">
+            <img src="victoria/vc11.png" onclick="changeImage(this)">
+            <img src="victoria/vc12.png" onclick="changeImage(this)">
+            <img src="victoria/vc13.png" onclick="changeImage(this)">
+            <img src="victoria/vc14.png" onclick="changeImage(this)">
+            <img src="victoria/vc15.png" onclick="changeImage(this)">
+            <img src="victoria/vc16.png" onclick="changeImage(this)">
+            <img src="victoria/vc17.png" onclick="changeImage(this)">
+            <img src="victoria/vc18.png" onclick="changeImage(this)">
+            <img src="victoria/vc19.png" onclick="changeImage(this)">
+            <img src="victoria/vc20.png" onclick="changeImage(this)">
+            <img src="victoria/vc2.png" onclick="changeImage(this)">
+            <img src="victoria/vc4.png" onclick="changeImage(this)">
+            <img src="victoria/vc5.png" onclick="changeImage(this)">
+        </div>
+
+        <h3>📍 Location:</h3>
+        <p>Panapaan III, Bacoor, Cavite</p>
+
+        <h3>📐 Property Details:</h3>
+        <ul>
+            <li>Lot Area: 90 sqm</li>
+            <li>Floor Area: 165.24 sqm</li>
+            <li>2 Storey with Attic</li>
+            <li>3 Bedrooms</li>
+            <li>2 Toilet & Bath</li>
+            <li>Living Area, Dining Area, Kitchen, Garage, Balcony</li>
+        </ul>
+
+        <h3>💰 Price:</h3>
+        <p>₱11,537,112.00</p>
+        <p>₱40,000 - Reservation</p>
+
+        <h3>📞 Contact:</h3>
+        <p>RicoHomes.ph | 09391209602</p>
+    </div>
+
+    <!-- SCRIPT FOR IMAGE SWITCH -->
+    <script>
+        function changeImage(img) {
+            document.getElementById("mainImage").src = img.src;
+        }
+    </script>
+
+</body>
+
+</html>

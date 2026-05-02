@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Neuville Property Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        /* BACK BUTTON */
+        .home-btn {
+            display: inline-block;
+            margin: 15px;
+            text-decoration: none;
+            background: green;
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        /* MAIN IMAGE */
+        .main-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        /* THUMBNAIL GALLERY */
+        .gallery {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            margin-top: 12px;
+            padding-bottom: 5px;
+            scroll-snap-type: x mandatory;
+        }
+
+        /* THUMBNAILS */
+        .gallery img {
+            flex: 0 0 auto;
+            width: 80px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: 0.6;
+            border: 2px solid transparent;
+            transition: 0.3s;
+            scroll-snap-align: start;
+        }
+
+        .gallery img:hover {
+            opacity: 1;
+            transform: scale(1.08);
+        }
+
+        .gallery img.active {
+            border: 2px solid #1e3a8a;
+            opacity: 1;
+        }
+
+        h1 {
+            margin-top: 10px;
+            font-size: 22px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .gallery img {
+                width: 65px;
+                height: 55px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="home-btn">🏠 Back to Home</a>
+
+    <div class="container">
+        <h1>✅ NEUVILLE ASTRID TOWNHOUSE 🏡</h1>
+
+        <!-- MAIN IMAGE -->
+        <img src="neuville/nu1.jpg" class="main-img" id="mainImage">
+
+        <!-- THUMBNAILS -->
+        <div class="gallery">
+            <img src="neuville/nu1.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu4.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu5.jpg" onclick="changeImage(this)">
+            <img src="neuville/ground floor.png" onclick="changeImage(this)">
+            <img src="neuville/2nd floor.png" onclick="changeImage(this)">
+            <img src="neuville/nu7.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu9.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu10.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu11.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu12.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu13.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu14.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu15.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu16.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu17.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu18.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu19.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu20.jpg" onclick="changeImage(this)">
+            <img src="neuville/nu21.jpg" onclick="changeImage(this)">
+        </div>
+
+        <h3>📍 Location:</h3>
+        <p>Sanja Major Road, Tanza, Cavite</p>
+
+        <h3>📐 Property Details:</h3>
+        <ul>
+            <li>Lot Area: 52 sqm</li>
+            <li>Floor Area: 60.40 sqm</li>
+            <li>Total Improved Area: 90 sqm</li>
+            <li>3 Bedrooms</li>
+            <li>2 Toilet & Bath</li>
+            <li>Living, Dining, Kitchen, Service Area, Parking</li>
+        </ul>
+
+        <h3>💰 Price:</h3>
+        <p><b>Contact for details</b></p>
+        <p>₱20,000 Reservation</p>
+
+        <h3>📞 Contact:</h3>
+        <p>RicoHomes.ph | 09391209602</p>
+    </div>
+
+    <script>
+        function changeImage(img) {
+            const main = document.getElementById("mainImage");
+            main.src = img.src;
+
+            const thumbs = document.querySelectorAll(".gallery img");
+            thumbs.forEach(t => t.classList.remove("active"));
+            img.classList.add("active");
+        }
+
+        window.onload = function () {
+            const thumbs = document.querySelectorAll(".gallery img");
+            if (thumbs.length > 0) {
+                thumbs[0].classList.add("active");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

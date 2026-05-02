@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Versailles High End Subdivision</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        h1.page-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        /* CARD */
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .main-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .location {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: #000;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background: #25D366;
+            color: #fff;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: flex;
+            gap: 8px;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        .gallery img {
+            width: 90px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .gallery img:hover {
+            opacity: 1;
+            transform: scale(1.3);
+        }
+
+        .gallery img.active {
+            opacity: 1;
+            border: 2px solid #000;
+        }
+
+        .home-float {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <a href="index.html" class="home-float">🏠 Back</a>
+
+    <div class="container">
+            
+            <!-- SIMPLE PROJECT DETAILS -->
+            
+            <h1 style="font-size:24px; margin-bottom:10px;">
+                🏡 Versailles Alabang – Project Details
+            </h1>
+            
+            <h2 style="font-size:18px; margin-top:20px;">📍 Location</h2>
+            <p style="font-size:14px; line-height:1.6;">
+                Versailles Alabang Village is located along Daang Hari Road near Las Piñas, Alabang, and Cavite border.
+                Across Ayala Alabang Village. Accessible via MCX, SLEX, and Skyway.
+            </p>
+            
+            <p style="font-size:14px;">
+                👉 Travel time: Makati/BGC 20–30 mins | NAIA ~20 mins
+            </p>
+            
+            <h2 style="font-size:18px; margin-top:20px;">🌟 Project Overview</h2>
+            <p style="font-size:14px; line-height:1.6;">
+                A 30-hectare gated luxury subdivision with Mediterranean-inspired design and flood-free elevated location.
+            </p>
+            
+            <p style="font-size:14px;">
+                👉 For luxury living, families, and investors.
+            </p>
+            
+            <h2 style="font-size:18px; margin-top:20px;">🏊 Amenities</h2>
+            <p style="font-size:14px; line-height:1.6;">
+                Clubhouse, swimming pools, gym, spa, tennis court, basketball court, parks, playgrounds, cabanas.
+            </p>
+            
+            <h2 style="font-size:18px; margin-top:20px;">📌 Nearby Places</h2>
+            
+            <p style="font-size:14px;">
+                🏫 Schools: De La Salle Zobel, San Beda Alabang<br>
+                🏥 Hospitals: Asian Hospital, Alabang Medical Center<br>
+                🛍️ Malls: ATC, Festival Mall, SM Southmall<br>
+                💼 Business: Filinvest City, Northgate Cyberzone
+            </p>
+            
+            <h2 style="font-size:18px; margin-top:20px;">🚗 Accessibility</h2>
+            <p style="font-size:14px; line-height:1.6;">
+                Near MCX exit, direct Daang Hari access, close to SLEX & Skyway. Easy travel to Makati, BGC, and airport.
+            </p>
+            
+            <h2 style="font-size:18px; margin-top:20px;">💡 Why Invest</h2>
+            <p style="font-size:14px; line-height:1.6;">
+                ✔ Prime Alabang location<br>
+                ✔ Luxury European community<br>
+                ✔ High property value growth<br>
+                ✔ Secure gated subdivision
+            </p>
+
+
+        <div class="grid">
+
+            <!-- HOUSE 1 -->
+            <div class="card">
+                <img src="verirene/1.jpg" class="main-img" id="main1">
+
+                <div class="card-content">
+                    🏡 Irene Model House – Versailles Alabang
+                    <h1>🏡 Irene Model House</h1>
+                    <p> The Irene Model is a luxury 3-storey Mediterranean-inspired home in Versailles Alabang, designed for large families
+                        and upscale living. </p>
+                    <h1>📐 Property Specifications</h1>
+                    <p> • Floor Area: 368 sqm<br> • Gross Area: 398 sqm<br> • Bedrooms: 5 Bedrooms (all with own T&B)<br> • Bathrooms:
+                        En-suite in all rooms<br> • Car Garage: Up to 4 cars<br> • House Type: 3-Storey Luxury Home </p>
+                    <h1>✨ Key Features</h1>
+                    <p> • High ceiling living area<br> • Spacious master bedroom with walk-in closet<br> • Master bathroom with double
+                        sinks<br> • Helper’s room with own T&B<br> • Guest/extra room available<br> • Balcony with open view spaces </p>
+                    <div class="location">📍 Alabang Daang Hari</div>
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                        <a href="https://m.me/ricogidocsocial" class="btn btn-secondary">Chat</a>
+                    </div>
+                </div>
+
+                <div class="gallery">
+                    <img src="verirene/1.jpg" class="active" onclick="changeImage('main1', this)">
+                    <img src="verirene/2.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/3.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/4.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/5.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/6.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/7.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/8.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/9.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/10.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/11.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/12.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/13.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/14.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/15.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/16.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/17.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/18.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/19.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/20.jpg" onclick="changeImage('main1', this)">
+                    <img src="verirene/21.jpg" onclick="changeImage('main1', this)">
+                </div>
+            </div>
+
+            <!-- HOUSE 2 -->
+            <div class="card">
+                <img src="veradelaide/1.png" class="main-img" id="main2">
+
+                <div class="card-content">
+                    🏡 ADELAIDE MODEL – Versailles Alabang
+                    <h1>🏡 Adelaide Model House 🔑 Move-in Ready Dream Home</h1>
+                    <p> Elegant 2-storey home designed for modern Filipino families with spacious layout and luxury feel. </p>
+                    <h2>📐 Specs</h2>
+                    <p> • Floor Area: 272 sqm<br> • Lot Area: 250 sqm (approx.)<br> • Bedrooms: 4 Bedrooms<br> • Bathrooms: 4–5 T&B<br> •
+                        Car Garage: 2–3 cars<br> • Type: 2-Storey Single Detached </p>
+                    <h2>✨ Features</h2>
+                    <p> Spacious living area, master bedroom with walk-in closet, family hall, maid’s room, balcony. </p>
+                    <div class="location">📍 Alabang Daang Hari</div>
+
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                        <a href="https://m.me/ricogidocsocial" class="btn btn-secondary">Chat</a>
+                    </div>
+                </div>
+
+                <div class="gallery">
+                    <img src="veradelaide/1.png" class="active" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/2.png" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/3.png" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/4.png" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/5.png" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/6.png" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/7.jpg" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/8.jpg" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/9.jpg" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/10.jpg" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/11.jpg" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/12.jpg" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/13.jpg" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/14.jpg" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/15.jpg" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/16.png" onclick="changeImage('main2', this)">
+                    <img src="veradelaide/17.jpg" onclick="changeImage('main2', this)">
+                </div>
+            </div>
+
+            <!-- HOUSE 3 -->
+            <div class="card">
+                <img src="versofia/1.jpg" class="main-img" id="main3">
+
+                <div class="card-content">
+                    🏡 SOFIA MODEL – Versailles Alabang
+                    <h1>🏡 🏡 Sofia Model House 🛋️ Modern Living, Perfect Comfort</h1>
+                    <p> Modern compact luxury home ideal for small to medium families. </p>
+                    <h2>📐 Specs</h2>
+                    <p> • Floor Area: 180–210 sqm<br> • Bedrooms: 3–4 Bedrooms<br> • Bathrooms: 3 T&B<br> • Car Garage: 2 cars<br> • Type:
+                        2-Storey House </p>
+                    <h2>✨ Features</h2>
+                    <p> Efficient layout, balcony, open kitchen, master bedroom suite. </p>
+                    <h1>🏘️ Lifestyle Advantage</h1>
+                    <p> • Located inside exclusive Versailles Alabang Village<br> • Mediterranean-inspired luxury design<br> • Secure gated
+                        community with 24/7 security<br> • Ideal for large families or investment property </p>
+
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                        <a href="https://m.me/ricogidocsocial" class="btn btn-secondary">Chat</a>
+                    </div>
+                </div>
+
+                <div class="gallery">
+                    <img src="versofia/1.jpg" class="active" onclick="changeImage('main3', this)">
+                    <img src="versofia/3.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/4.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/5.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/6.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/7.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/8.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/9.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/10.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/11.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/12.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/13.jpg" onclick="changeImage('main3', this)">
+                    <img src="versofia/14.jpg" onclick="changeImage('main3', this)">
+                </div>
+            </div>
+
+            <!-- house 4 -->
+
+            <div class="card">
+                <img src="verdiana/1.jpg" class="main-img" id="main3">
+            
+                <div class="card-content">
+                    🏡 DIANA MODEL – Versailles Alabang
+                    <h1>🏡 Diana Model House</h1>
+                    <p> Well-designed 2-storey home with balanced space for comfort and functionality. </p>
+                    <h2>📐 Specs</h2>
+                    <p> • Floor Area: 220–250 sqm (approx.)<br> • Bedrooms: 4 Bedrooms<br> • Bathrooms: 3–4 T&B<br> • Car Garage: 2 cars<br>
+                        • Type: 2-Storey House </p>
+                    <h2>✨ Features</h2>
+                    <p> Open living area, modern kitchen, balcony, service area, family room. </p>
+                    
+            
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                        <a href="https://m.me/ricogidocsocial" class="btn btn-secondary">Chat</a>
+                    </div>
+                </div>
+            
+                <div class="gallery">
+                    <img src="verdiana/1.jpg" class="active" onclick="changeImage('main3', this)">
+                    <img src="verdiana/2.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/3.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/4.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/5.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/6.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/7.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/9.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/9.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/10.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/11.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/12.jpg" onclick="changeImage('main4', this)">
+                    <img src="verdiana/13.jpg" onclick="changeImage('main4', this)">
+                </div>
+            </div>
+
+            <!-- house 5 -->
+
+            <div class="card">
+                <img src="verantoinette/antoinette.jpg" class="main-img" id="main3">
+            
+                <div class="card-content">
+                    🏡 ANTOINETTE MODEL – Versailles Alabang
+                    <h1>🏡 Antoinette Model House</h1>
+                    <p> Premium elegant home with classic European-inspired design. </p>
+                    <h2>📐 Specs</h2>
+                    <p> • Floor Area: 250–280 sqm<br> • Bedrooms: 4 Bedrooms<br> • Bathrooms: 4 T&B<br> • Car Garage: 2–3 cars<br> • Type:
+                        2-Storey Luxury Home </p>
+                    <h2>✨ Features</h2>
+                    <p> Grand living area, balcony, walk-in closet, maid’s room, modern kitchen. </p>
+            
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                        <a href="https://m.me/ricogidocsocial" class="btn btn-secondary">Chat</a>
+                    </div>
+                </div>
+            
+                <div class="gallery">
+                    <img src="verantoinette/antoinette.jpg" class="active" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/1.png" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/2.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/3.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/4.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/5.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/6.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/7.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/8.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/9.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/10.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/11.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/12.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/13.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/14.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/15.jpg" onclick="changeImage('main3', this)">
+                    <img src="verantoinette/16.jpg" onclick="changeImage('main3', this)">
+                </div>
+            </div>
+
+            <!-- house 6 -->
+            <div class="card">
+                <img src="veramelie/amelie.png" class="main-img" id="main3">
+            
+                <div class="card-content">
+                    🏡 AMELIE MODEL – Versailles Alabang
+                    <h1>🏡 Amelie Model House</h1>
+                    <p> Stylish modern home with practical layout and elegant finish. </p>
+                    <h2>📐 Specs</h2>
+                    <p> • Floor Area: 200–230 sqm<br> • Bedrooms: 3–4 Bedrooms<br> • Bathrooms: 3 T&B<br> • Car Garage: 2 cars<br> • Type:
+                        2-Storey House </p>
+                    <h2>✨ Features</h2>
+                    <p> Open layout design, balcony, functional kitchen, master suite. </p>
+            
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                        <a href="https://m.me/ricogidocsocial" class="btn btn-secondary">Chat</a>
+                    </div>
+                </div>
+            
+                <div class="gallery">
+                    <img src="veramelie/amelie.png" class="active" onclick="changeImage('main3', this)">
+                    <img src="veramelie/2.jpg" onclick="changeImage('main3', this)">
+                    <img src="veramelie/3.jpg" onclick="changeImage('main3', this)">
+                    <img src="veramelie/4.jpg" onclick="changeImage('main3', this)">
+                    <img src="veramelie/5.jpg" onclick="changeImage('main3', this)">
+                    <img src="veramelie/6.jpg" onclick="changeImage('main3', this)">
+                    <img src="veramelie/7.jpg" onclick="changeImage('main3', this)">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    
+    <!-- JS -->
+    <script>
+        function changeImage(mainId, thumb) {
+            const main = document.getElementById(mainId);
+            main.src = thumb.src;
+
+            const thumbs = thumb.parentElement.querySelectorAll("img");
+            thumbs.forEach(img => img.classList.remove("active"));
+
+            thumb.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>

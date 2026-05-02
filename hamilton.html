@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HAMILTON TOWNHOUSE IMUS, CAVITE CITY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+    }
+
+    /* Back Button */
+    .home-btn {
+        display: inline-block;
+        margin-bottom: 15px;
+        text-decoration: none;
+        background: green;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
+
+
+    /* Image */
+    .main-img {
+        width: 60%;
+        border-radius: 10px;
+    }
+
+    /* Gallery */
+    .gallery {
+        display: flex;
+        gap: 5px;
+        overflow-x: auto;
+        margin-top: 10px;
+    }
+
+    .gallery img {
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    /* Text */
+    h1 {
+        margin-top: 10px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+</style>
+
+<body>
+
+    <a href="index.html" class="home-btn">🏠Back to home page</a>
+
+    <div class="container">
+        <h1>HAMILTON END UNIT 🏡</h1>
+
+        <!-- MAIN IMAGE -->
+        <img src="hamilton/1.jpg" class="main-img" id="mainImage">
+
+        <!-- THUMBNAILS -->
+        <div class="gallery">
+            <img src="hamilton/1.jpg" onclick="changeImage(this)">
+            <img src="hamilton/3.jpg" onclick="changeImage(this)">
+            <img src="hamilton/4.jpg" onclick="changeImage(this)">
+            <img src="hamilton/5.jpg" onclick="changeImage(this)">
+            <img src="hamilton/6.jpg" onclick="changeImage(this)">
+            <img src="hamilton/7.jpg" onclick="changeImage(this)">
+            <img src="hamilton/8.jpg" onclick="changeImage(this)">
+            <img src="hamilton/9.jpg" onclick="changeImage(this)">
+            <img src="hamilton/10.jpg" onclick="changeImage(this)">
+            <img src="hamilton/11.jpg" onclick="changeImage(this)">
+            <img src="hamilton/12.jpg" onclick="changeImage(this)">
+            <img src="hamilton/13.jpg" onclick="changeImage(this)">
+        </div>
+
+        <h3>📍 Location:</h3>
+        <p>Brgy Malagasang II-E Imus, Cavite</p>
+
+        <h3>📐 Property Details:</h3>
+        <ul>
+            <li>AMANDA END UNIT</li>
+            <li>Lot Area: 100sqm</li>
+            <li>Floor Area: 67 sqm</li>
+            <li>3 Bedrooms</li>
+            <li>2 Toilet & Bath</li>
+        </ul>
+
+        <h3>📞 Contact:</h3>
+        <p>RicoHomes.ph | 09391209602</p>
+    </div>
+
+    <script>
+        function changeImage(img) {
+            document.getElementById("mainImage").src = img.src;
+
+            const thumbs = document.querySelectorAll(".gallery img");
+            thumbs.forEach(t => t.classList.remove("active"));
+            img.classList.add("active");
+        }
+
+        // set first active
+        window.onload = function () {
+            const first = document.querySelector(".gallery img");
+            if (first) first.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>

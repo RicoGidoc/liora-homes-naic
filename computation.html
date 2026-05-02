@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellefort House Details</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+        }
+
+        /* Back Button */
+        .home-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            text-decoration: none;
+            background: green;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        /* Image */
+        .main-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            gap: 5px;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+
+        .gallery img {
+            height: 70px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Text */
+        h1 {
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Back Button -->
+        <a href="index.html" class="home-btn">🏠 Back to home page</a>
+
+        <h1>LIORA HOMES NAIC🏡</h1>
+        <h2>📢 PRE-SELLING HOT PROMO! 🔥🏡💰</h2>
+        <h3>📢 LIMITED OFFER! 🎯 WITH EASY PAYMENT DOWNPAYMENT💰</h3>
+
+        <!-- Main Image -->
+        <img src="liora/1.jpg" class="main-img" id="mainImage">
+
+        <!-- Gallery -->
+        <div class="gallery">
+            <img src="computation/bank.png" onclick="changeImage(this)">
+            <img src="computation/pagibig.png" onclick="changeImage(this)">
+        </div>
+
+        <h3>📍 Location:Brgy Malainen, Naic, Cavite </h3>
+        
+
+    <section class="hero">
+        <div class="overlay">
+    
+            <h1>🏡✨ AGUIRRE TOWNHOUSE – LAS PIÑAS ✨🏡</h1>
+    
+            <p class="subtitle">
+                📍 Unit 2 – 2 Storey Townhouse <br>
+                💎 Modern • Spacious • Affordable Living
+            </p>
+    
+            <div class="card">
+                <h2>📐 PROPERTY DETAILS</h2>
+                <p>▫ Floor Area: <strong>142.45 SQM</strong></p>
+                <p>▫ Lot Area: <strong>80 SQM</strong></p>
+                <p>▫ Actual Lot Area: <strong>100.90 SQM</strong></p>
+            </div>
+    
+            <div class="card">
+                <h2>💰 TOTAL SELLING PRICE</h2>
+                <p class="price">Php 2,408,400</p>
+            </div>
+    
+            <div class="card">
+                <h2>📑 TOTAL CONTRACT DISCOUNTED PRICE</h2>
+                <p class="price">Php 2,408,400</p>
+            </div>
+    
+            <div class="card">
+                <h2>🏦 DOWNPAYMENT (10%)</h2>
+                <p>▫ Reservation Fee: Php 12,000</p>
+                <p>▫ 10% Down Payment</p>
+                <p>▫ Monthly Equity (15 Months): Php 15,2566</p>
+            </div>
+    
+            <div class="card">
+                <h2>🏦 BANK FINANCING (90%)</h2>
+                <p class="price">Php 2,167,560</p>
+            </div>
+    
+            <div class="card">
+                <h2>📊 ESTIMATED MONTHLY AMORTIZATION</h2>
+                <p>▫ 5 Years – Php 43,433/month</p>
+                <p>▫ 10 Years – Php 25,729/month</p>
+                <p>▫ 15 Years – Php 20,094/month</p>
+                <p>▫ 20 Years – Php 17,462/month</p>
+                <p>▫ 25 Years – Php 16,018/month</p>
+                <p>▫ 20 Years – Php 15,156/month</p>
+                <p>PLS FIND ATTACHED SAMPLE COMPUTATION</p>
+            </div>
+    
+            <div class="features">
+                <p>✅ Fixed at ___% interest rate for___years</p>
+                <p>✅ Bank financing available</p>
+            </div>
+    
+            <a href="contact.html" class="btn">
+                📩 Message now for site viewing & reservation!
+            </a>
+    
+        </div>
+    </section>
+
+        <h3>📞📩 Get in Touch with Your Property Consultant</h3>
+        <p>Globe 0917 6979 508 | Smart 0939 1209 602</p>
+        <p>email:rgg252010@yahoo.com</p>
+
+    </div>
+
+    <!-- JS for Image Click -->
+    <script>
+        function changeImage(img) {
+            document.getElementById("mainImage").src = img.src;
+        }
+    </script>
+
+</body>
+
+</html>
