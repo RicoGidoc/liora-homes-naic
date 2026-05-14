@@ -20,12 +20,136 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <meta name="google-site-verification" content="2KJB1r6Ldr3nHKl6cuxeHVpYw_HBwt0GI1L3EmD-E-8" />
 </head>
+  
+/* Hide Header and Nav Smoothly */
+  <style>
+header,
+#promobutton {
+  max-height: 500px;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* Hidden State */
+.hide-section {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: brown;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 9999;
+  font-weight: bold;
+}
+
+.toggle-btn:hover {
+  background: burlywood;
+} 
+
+ /* Toggle Button whatsApp css */
+.toggle-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 9999;
+  font-weight: bold;
+}
+
+.toggle-btn:hover {
+  background: #2563eb;
+}
+
+/* WhatsApp Floating Button */
+.chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 99999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: inline-block;
+}
+
+.chat-btn:hover {
+  background: #1ebe5d;
+  color: white;
+}
+</style>
+  
 <script>
   function toggleSections() {
     document.querySelector("header").classList.toggle("hide-section");
     document.querySelector("#promobutton").classList.toggle("hide-section");
   } 
 </script>
+
+  <!-- ============== JAVASCRIPT ============== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    let index = 0;
+
+    const track = document.querySelector(".carousel-track");
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+
+    function updateSlider() {
+
+        track.style.transform = `translateX(-${index * 100}%)`;
+
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+    }
+
+    // Manual Dot Navigation
+    window.goToSlide = function(i) {
+        index = i;
+        updateSlider();
+    };
+
+    // Auto Slide
+    setInterval(() => {
+
+        index++;
+
+        if (index >= slides.length) {
+            index = 0;
+        }
+
+        updateSlider();
+
+    }, 3000);
+
+});
+</script>
+
+<!-- ================ JavaScript used to run slider ==================== -->
+
+
+  
 
 <body>
   <header>
@@ -149,129 +273,7 @@
         <button onclick="showSlide(2)" class="dot"></button>
       </div>
     </div> -->
-<!-- ==============java=================== -->
-    <!-- ============== JAVASCRIPT ============== -->
-    
-          <script>
-              document.addEventListener("DOMContentLoaded", function () {
 
-                let index = 0;
-              const track = document.querySelector(".carousel-track");
-              const slides = document.querySelectorAll(".slide");
-              const dots = document.querySelectorAll(".dot");
-
-              function update() {
-                track.style.transform = `translateX(-${index * 100}%)`;
-
-        dots.forEach(d => d.classList.remove("active"));
-              dots[index].classList.add("active");
-    }
-
-              window.goToSlide = function(i) {
-                index = i;
-              update();
-    }
-
-    setInterval(() => {
-                index++;
-        if (index >= slides.length) index = 0;
-              update();
-    }, 3000);
-
-});
-
-
-      </script>
-
-          
-
- <style>
-
-/* Hide Header and Nav Smoothly */
-header,
-#promobutton {
-  max-height: 500px;
-  opacity: 1;
-  overflow: hidden;
-  transition: all 0.5s ease;
-}
-
-/* Hidden State */
-.hide-section {
-  max-height: 0;
-  opacity: 0;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Toggle Button */
-.toggle-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background: brown;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 9999;
-  font-weight: bold;
-}
-
-.toggle-btn:hover {
-  background: burlywood;
-} 
-
-
-    /* Toggle Button whatsApp css */
-  <style>
-.toggle-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background: #1e3a8a;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 9999;
-  font-weight: bold;
-}
-
-.toggle-btn:hover {
-  background: #2563eb;
-}
-
-/* WhatsApp Floating Button */
-.chat-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  z-index: 99999;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  display: inline-block;
-}
-
-.chat-btn:hover {
-  background: #1ebe5d;
-  color: white;
-}
-</style>
-
-   
-          </style>
-    
-    
-
-    <!-- ================Java use to run slide==================== -->
         
 
       <!-- PROPERTY 1 -->
