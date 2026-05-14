@@ -60,46 +60,57 @@ header,
   background: burlywood;
 } 
 
- /* Toggle Button whatsApp css */
-.toggle-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background: #1e3a8a;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 9999;
-  font-weight: bold;
+    <!-- ================= CSS ================= -->
+
+
+.chat-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
 }
 
-.toggle-btn:hover {
-  background: #2563eb;
+.chat-btn:hover{
+    transform: scale(1.05);
+    background: #20ba5a;
 }
 
-/* WhatsApp Floating Button */
-.chat-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  z-index: 99999;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  display: inline-block;
+.chat-btn i{
+    font-size: 28px;
 }
 
-.chat-btn:hover {
-  background: #1ebe5d;
-  color: white;
+@media(max-width:768px){
+
+    .chat-btn{
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .chat-btn i{
+        font-size: 24px;
+    }
+
 }
+
 </style>
+
+ 
   
 <!-- <script>
   function toggleSections() {
@@ -501,10 +512,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </footer>
 
+<!-- ================= WHATSAPP BUTTON ================= -->
 <a href="https://api.whatsapp.com/send?phone=639391209602&text=Hello%20I%27m%20interested%20in%20Newtowne%20Dasmari%C3%B1as%20Cavite%20condo%20units"
-   onclick="window.open(this.href,'_blank'); return false;"
+   target="_blank"
    class="chat-btn">
-  💬 Chat with us
+   <i class="fa-brands fa-whatsapp"></i>
+   Chat with us
 </a>
   
 <script>
