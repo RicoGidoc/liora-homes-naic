@@ -472,39 +472,83 @@ button {
 .cta-btn:hover {
     background: brown;
 }
-
 /* 📱 MOBILE */
 @media (max-width: 768px) {
+
     .hero-card {
-        padding: 5px;
+        padding: 10px;
     }
 
     .hero-card h1 {
-        font-size: 10px;
+        font-size: 16px;
     }
 
-  /* =========  fix============ */
+    /* ===== CHAT BUTTON ===== */
+    .chat-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        padding: 10px 14px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        z-index: 9999;
 
-    .chat-btn{
-    position: fixed;
-    bottom: 20px;
-    right: 200px;
-    background: #25D366;
-    color: white;
-    padding: 7px 12px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 8px;
 
-    display: flex;
-    align-items: center;
-    gap: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: 0.3s;
+    }
 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: 0.3s;
+    /* ===== HEADER ===== */
+    header {
+        text-align: center;
+        padding: 10px;
+        background: #0f172a; /* more professional than brown */
+        color: #fff;
+    }
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px;
+        background: #0f172a;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        background: transparent;
+        padding: 6px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #fbbf24;
+    }
 }
+
+
+
 
   /* ===== HEADER ===== */
   header {
